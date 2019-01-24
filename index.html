@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html" ; charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Стронціцька</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="slider.css">
+    
+    <link rel="stylesheet" href="animate.css">
+    <link rel="icon" href="favicon.ico">
+    <link href="http://uk.allfont.net/allfont.css?fonts=pt-sans-italic" rel="stylesheet" type="text/css" />
+    <!--  Бібліотека jquery -->
+   
+    <script type="text/javascript" src="js/jquery.1.7.1.min.js"></script>
+  
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Заліпання шапки при скролі
+            $("#header").removeClass("default");
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 0) {
+                    $("#header").addClass("default").fadeIn('fast');
+                    $('.nav_item').css("margin-left", "20px");
+                    $('.nav_item').css("transition", "1s");
+                    $('.logo_info').fadeOut(100);
+                }
+                else {
+                    $("#header").removeClass("default").fadeIn('fast');
+                    $('.nav_item').css("margin-left", "0px");
+                    $('.nav_item').css("transition", "1s");
+                    $('.logo_info').fadeIn(500);
+                };
+            });
+            // Швидкість скролінку при переході по якорях
+//            $('a[href^="#"]').click(function () {
+//                elementClick = $(this).attr("href");
+//                destination = $(elementClick).offset().top;
+//                if ($.browser.safari) {
+//                    $('body').animate({
+//                        scrollTop: destination
+//                    }, 900);
+//                }
+//                else {
+//                    $('html').animate({
+//                        scrollTop: destination
+//                    }, 900);
+//                }
+//                return false;
+//            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!--  Header -->
+        <div id="header">
+            <div class="container clearfix">
+                <div class="logo">
+                    <a href="index.html"><img class="logo_img" src="img/coffe.png" height="30" width="80" alt="">
+                    <span class='logo_info'>Learn English with BBC</span></a>
+                </div>
+                <!--  Navigation -->
+                <ul class="nav">
+                    <li class='nav_item'><a href="#main">Домашня</a></li>
+                    <li class='nav_item'><a href="#service">Про BBC</a></li>
+                    <li class='nav_item'><a href="#portfolio">Курси</a></li>
+                    <li class='nav_item'><a href="#about">Відео</a></li>
+					<li class='nav_item'><a href="#item">Команда</a></li>
+                    <li class='nav_item'><a href="#contact">Контакти</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--  Home page -->
+
+   <div class="slidershow" id="main">
+            <div class="mySlides fade"> <img src="img/2.jpg" style="height: 100vh" width="100%"> </div>
+            <div class="mySlides fade"> <img src="img/3.jpg" style="height: 100vh" width="100%"> </div>
+            <div class="mySlides fade"> <img src="img/4.jpg" style="height: 100vh" width="100%"> </div>
+            <div class="mySlides fade"> <img src="img/2.jpg" style="height: 100vh" width="100%"> </div>
+            <div class="mySlides fade"> <img src="img/3.jpg" style="height: 100vh" width="100%"> </div>
+            <a onclick="plusSlides(1)" class="prev"><img src="img/right.png"></a>
+            <a onclick="plusSlides(-1)" class="next"><img src="img/left.png"></a>
+            <div class="dots"> 
+            <span onmousemove="pres(1)" onmouseout="none(1)" class="dot" onclick="currentSlide(1)"></span> 
+            <span onmousemove="pres(2)" onmouseout="none(2)" class="dot" onclick="currentSlide(2)"></span> 
+            <span onmousemove="pres(3)" onmouseout="none(3)" class="dot" onclick="currentSlide(3)"></span> 
+            <span onmousemove="pres(4)" onmouseout="none(4)" class="dot" onclick="currentSlide(4)"></span> 
+            <span onmousemove="pres(5)" onmouseout="none(5)" class="dot" onclick="currentSlide(5)"></span>
+                 <div id="pic_1"></div>
+                 <div id="pic_2"></div>
+                 <div id="pic_3"></div>
+                 <div id="pic_4"></div>
+                 <div id="pic_5"></div>
+            </div>
+        </div>
+        <!--  Servise -->
+        <div id="service" name="service" class="box">
+            <div class="container">
+                <h2 class="title"> - Про ВВС - </h2>
+                <p class="descr">У нас - найкраще!!!</p>
+                <div class="services-wrap clearfix">
+                    <div class="services-item commerce">
+                        <h5 class="title">Викладачі з усього світу</h5>
+                        <p>Вас навчатимуть англійської
+                            <br> найкращі іноземні викладачі. </p>
+                    </div>
+<!--
+                    <div class="services-item responsive">
+                        <h5 class="title">Печеньки</h5>
+                        <p>У нас безліч прянощів
+                            <br> які доповнюють смак нашої кави. </p>
+                    </div>
+-->
+                    <div class="services-item security">
+                        <h5 class="title">Дистанційне навчання</h5>
+                        <p>Ви зможете навчатись
+                            <br> не виходячи з дому. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Portfolio -->
+        <div id="portfolio" name="portfolio" class="box">
+            <div class="container">
+                <h2 class="title">- КУРСИ - </h2>
+                <p class="descr">Оберіть курс для свого рівня англійської.</p>
+                <div class="portfolio-wrap clearfix">
+                   <div class="portfolio-item">
+                        <a href="#"><img src="img/p-item1.png" height="200" width="250" alt=""></a>
+                        <div class="p-item-footer">
+                            <hr>
+                            <h5 class="title">Початковий</h5> <span>230$</span> </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="#"><img src="img/p-item2.png" height="200" width="200" alt=""></a>
+                        <div class="p-item-footer">
+                            <hr>
+                            <h5 class="title">Середній</h5> <span>240$</span> </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="#"><img src="img/p-item3.jpg" height="200" width="190" alt=""></a>
+                        <div class="p-item-footer">
+                            <hr>
+                            <h5 class="title">Високий</h5> <span>285$</span> </div>
+                    </div>
+                       <div class="portfolio-item">
+                        <a href="#"><img src="img/p-item11.png" height="240" width="250" alt=""></a>
+                        <div class="p-item-footer">
+                            <hr>
+                            <h5 class="title">Британська лексика</h5> <span>240$</span> </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="#"><img src="img/p-item22.png" height="240" width="250" alt=""></a>
+                        <div class="p-item-footer">
+                            <hr>
+                            <h5 class="title">Американська лексика</h5> <span>300$</span> </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="#"><img src="img/p-item33.jpg" height="240" width="250" alt=""></a>
+                        <div class="p-item-footer">
+                            <hr>
+                            <h5 class="title">Австралійська лексика</h5> <span>450$</span> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  About me -->
+        <div id="about" name="about" class="box">
+            <div class="container">
+                <h2 class="title">- Відео -</h2>
+                <p class="descr">Пропонуємо Вашій увазі один з онлайн-уроків Емми </p>
+				<video controls class='video_content video'  width="650" height="350" src="videoplayback.3gpp " frameborder="0" </video> 
+               <!-- <iframe class='video_content video' width="650" height="350" src="videoplayback.mp4" frameborder="0" allowfullscreen></iframe> -->
+            </div>
+        </div>
+        <!--  Team -->
+        <div id="item" class="box">
+            <div class="container">
+                <h2 class="title"> - Команда -</h2>
+                <p class="descr">Керуючий персонал</p>
+                <div class="team-wrap clearfix">
+                    <div class="team-item"> <img src="img/ab-item1.jpg" height="220" width="220" alt="" />
+                        <h5 class="title">Емма</h5>
+                        <p class="cat">Засновник</p>
+                        <div class="social"> <a href="https://www.instagram.com" class="ic-in">&nbsp;</a> <a href="https://www.facebook.com" class="ic-fb">&nbsp;</a> <a href="https://myaccount.google.com/u/1/?utm_source=OGB&utm_medium=act&pli=1" class="ic-gl">&nbsp;</a> </div>
+                    </div>
+                    <div class="team-item"><p class="cat my_info">Це Емма.Вона наш найкращий викладач із Британії.  
+					Емма отримала А Сертифікат з IELTS TOEFL та PTL.Емма радо поспілкується з Вами, 
+					тому заходьте до нас на офійні сторінки у соціальних мережах, а також завітайте на каву у наш офіс!
+					:) </p> </div>
+                </div>
+                <p class="descr team-info">Вивчайте мову з найкращими викладачами!!!</p>
+            </div>
+        </div>
+        <!--  Brends -->
+        <div id="brand">
+            <div class="container">
+               <h2 class="title">- Підписатись на оновлення -</h2>
+               <input class="inp" placeholder="Ваш емейл" type="text"> <button class="btn">Підписатись</button>
+            </div>
+        </div>
+        <!--  Contact -->
+        <div id="contact" name="contact" class="box1">
+            <div class="">
+                <h2 class="title">- Контакти -</h2>
+                <p class="descr1">Завітайте до нас обов'язково!</p>
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1286.6922204927528!2d24.007500712297592!3d49.83523359823579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add78e77ab623%3A0x9187f65ba5384425!2z0IbQvdGB0YLQuNGC0YPRgiDQutC-0LzQvyfRjtGC0LXRgNC90LjRhSDQvdCw0YPQuiDRgtCwINGW0L3RhNC-0YDQvNCw0YbRltC50L3QuNGFINGC0LXRhdC90L7Qu9C-0LPRltC5!5e0!3m2!1suk!2sua!4v1506284780547" width="90%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <!--  Footer -->
+        <div id="copyright">
+            <div class="container clearfix">
+                <p class="left">&copy; Всі права захищено 2018
+                    <br> Веб-розробка: <a href="https://www.facebook.com">Стронціцька Анастасія </a></p>
+                <div class="social"> <a href="#" class="ic-tw black">&nbsp;</a> <a href="https://www.facebook.com" class="ic-fb black">&nbsp;</a> <a href="#" class="ic-pn black">&nbsp;</a> <a href="https://google.com" class="ic-gl black">&nbsp;</a> </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+
+</html>
